@@ -2,6 +2,7 @@ const express = require('express');
 const connectDB = require('./db');
 require('dotenv').config();
 const app = express();
+const cors = require('cors');
 
 // Connect Database
 connectDB();
@@ -23,7 +24,7 @@ connectDB();
 // }
 
 // Init Middleware
-app.use(cors({credentials: true}));
+app.use(cors({ credentials: true }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
