@@ -25,7 +25,7 @@ connectDB();
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-app.all('', (req, res, next) => {
+app.all('*', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '');
   res.header(
     'Access-Control-Allow-Methods',
